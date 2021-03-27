@@ -1,0 +1,25 @@
+{
+  "name": "fridgingstarving",
+  "version": "1.0.0",
+  "description": "An at-home recipe app that uses what ingredients that you already have",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MWebb2321/FridgingStarving.git"
+  },
+  "author": "Manny Chacon, Guadalupe de Arcos, Matthew Webb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MWebb2321/FridgingStarving/issues"
+  },
+  "homepage": "https://github.com/MWebb2321/FridgingStarving#readme",
+  "dependencies": {
+    "commander": "^7.2.0",
+    "express": "^4.17.1",
+    "inquirer": "^8.0.0",
+    "sequelize": "^6.6.2"
+  }
+}
