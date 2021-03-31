@@ -4,4 +4,9 @@
 =======
 node_modules
 .env
+<<<<<<< HEAD
 >>>>>>> 7f82984d85c6ad9ab29a65b6d71ee5f29f78de14
+=======
+node_modules/
+.env/
+>>>>>>> 0296232c6666a96b3e2368c440317a5d053a9490
