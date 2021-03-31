@@ -9,45 +9,13 @@
     </p>
     <p>
       Ingredients:
-      {{guest_name}}
+      {{ingredient_list}}
     </p>
-    {{#if has_nuts}}
-      <p class="has-nuts">
-        Contains Nuts
-      </p>
-    {{/if}}
+    <p>
+      Preparation:
+      {{preparation}}
+    </p>
   </div>
 </div>
 
-<div class="edit-dish-container">
-  <h2>
-    Update Dish
-  </h2>
-  <form class="edit-dish-form">
-    <label for="dish_name">
-      Dish Name:
-    </label>
-    <br />
-    <textarea id="dish_name" name="dish_name" rows="2" cols="30">
-      {{dish_name}}
-    </textarea>
-    <br />
-    <label for="description">
-      Description:
-    </label>
-    <br />
-    <textarea id="description" name="description" rows="5" cols="30">
-      {{description}}
-    </textarea>
-    <br />
-    <input type="checkbox" id="has_nuts" name="has_nuts" value="true" />
-    <label for="has_nuts">
-      Check box if this dish contains nuts
-    </label>
-    <br />
-    <button type="submit" value="Submit">
-      Submit
-    </button>
-  </form>
-</div>
 <script src="/js/edit-dish.js"></script>
