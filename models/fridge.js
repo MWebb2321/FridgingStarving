@@ -25,8 +25,6 @@ Fridge.init(
       allowNull: false,
       },
     },
-     { 
-  },
   {
     hooks: {
       beforeCreate: async (newUserData) => {
