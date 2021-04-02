@@ -16,7 +16,7 @@ Our task was to build a real-world full-stack app. In this app, we allow the use
 
 ## Installation
 
-npm i dotenv express mysyql2 sequelize
+npm i commander express handlebars inquirer mysql mysql2 sequelize
 
 ## Usage
 
