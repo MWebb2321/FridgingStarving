@@ -16,6 +16,11 @@ Fridge.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      },
+
     refrigerated: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
