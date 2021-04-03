@@ -16,7 +16,7 @@ Fridge.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    refridgerated: {
+    refrigerated: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
     },
@@ -25,8 +25,6 @@ Fridge.init(
       allowNull: false,
       },
     },
-     { 
-  },
   {
     hooks: {
       beforeCreate: async (newUserData) => {
