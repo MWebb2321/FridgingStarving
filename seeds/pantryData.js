@@ -1,6 +1,6 @@
 const { Pantry } = require("../models");
 
-const pantrydata = [
+const seedPantry = [
   {
     name: "Cereal",
   },

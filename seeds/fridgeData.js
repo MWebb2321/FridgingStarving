@@ -1,6 +1,6 @@
 const { fridge } = require("../models");
 
-const fridgeData = [
+const seedFridge = [
   {
     name: "Lettuce",
   },
