@@ -15,14 +15,6 @@ Fridge.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-    },
-    refrigerated: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    frozen: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
       },
     },
   {
