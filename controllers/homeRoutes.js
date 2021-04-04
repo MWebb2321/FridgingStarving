@@ -6,7 +6,7 @@ const withAuth = require('../utils/auth');
 router.get('/', withAuth, async (req, res) => {
   try {
     const fridgeData = await Fridge.findAll({
-      attributes: { exclude: ['id', 'name', 'email'] },
+      attributes: { exclude: ['id'] },
       order: [['name', 'ASC']],
     });
 
