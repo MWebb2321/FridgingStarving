@@ -1,4 +1,5 @@
-const { fridge } = require("../models");
+const { INET } = require("sequelize/types");
+const { fridge, User } = require("../models");
 
 const seedFridge = [
   {
@@ -16,5 +17,12 @@ const seedFridge = [
 ];
 
 const seedGallery = () => fridge.bulkCreate(fridgeData);
+
+it("seed database", async (done) => {
+  for (const f of fridge) {
+    const seedFridge = new seedFridge(u);
+    await fridge.save();
+  }
+});
 
 module.exports = seedFridge;
