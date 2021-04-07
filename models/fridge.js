@@ -1,6 +1,6 @@
-const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const bcrypt = require("bcrypt");
+const sequelize = require("../config/connection");
 
 class Fridge extends Model {
   checkPassword(loginPw) {
@@ -16,6 +16,11 @@ Fridge.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      },
+
     refrigerated: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
@@ -23,8 +28,8 @@ Fridge.init(
     frozen: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
-      },
     },
+  },
   {
     hooks: {
       beforeCreate: async (newUserData) => {
@@ -36,7 +41,7 @@ Fridge.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Fridge',
+    modelName: "Fridge",
   }
 );
 
