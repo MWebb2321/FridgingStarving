@@ -3,6 +3,8 @@ const { Pantry } = require("../models");
 const seedPantry = [
   {
     name: "Cereal",
+    refrigerated: "false",
+    frozen: "false",
   },
   {
     name: "Bread",
@@ -12,6 +14,6 @@ const seedPantry = [
   },
 ];
 
-const seedPantry = () => Pantry.bulkCreate(pantrydata);
+const seedPantry = () => Pantry.bulkCreate(pantryData);
 
 module.exports = seedPantry;
