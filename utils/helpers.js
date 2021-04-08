@@ -8,8 +8,7 @@ module.exports = {
         order: [['name', 'ASC']],
       });
   
-      const fridge = fridgeData.map((project) => project.get({ plain: true }));
-      console.log(fridge);
+      const fridge = fridgeData.map((project) => Fridge.get({ plain: true }));
       res.render('homepage', {
         fridge,
         // Pass the logged in flag to the template
