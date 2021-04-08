@@ -1,4 +1,4 @@
-const { Fridge } = require("../models");
+const { Fridge, User } = require("../models");
 
 const seedFridge = [
   {
