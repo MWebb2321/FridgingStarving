@@ -23,7 +23,6 @@ const seedFridge = [
   },
 ];
 
-module.exports = seedFridge;
 const seedGallery = () => Fridge.bulkCreate(seedFridge);
 
 seedGallery();
