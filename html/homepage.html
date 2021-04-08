@@ -7,9 +7,23 @@
         <link href="../public/css/style.css" rel="stylesheet">
     </head>
     <body>
-        <script id="dish" type="text/x-handlebars-template">
-        <p>This is {{dish}} is what you can make from {{food-items}}.</p>
-    </script>    
+        <div id="data-goes-here" class="col-md-5 no-padding"></div>
+        <script id="dish-template" type="text/x-handlebars-template">
+            <p>You're able to make {{dish_name}} from {{food-items}}.</p>
+            <div class="container">
+               <h3>{{description}}</h3>
+               <h2>{{ingredient_list}}</h2>
+               <h2>{{preparation</h2>
+            </div>
+        </script>    
+
+    <script>
+        var template = Handlebars.compile($('entry-template').html());
+
+        //Unsure of where the "desc" part of the code is being pulled from
+        $('data-goes-here').html(template(description));
+
+    </script>
 
     <div class='content-placeholder'></div>
     </body>
