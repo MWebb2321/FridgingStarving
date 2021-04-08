@@ -11,16 +11,15 @@
         <script id="dish-template" type="text/x-handlebars-template">
             <p>You're able to make {{dish_name}} from {{food-items}}.</p>
             <div class="container">
-               <h3>{{description}}</h3>
-               <h2>{{ingredient_list}}</h2>
-               <h2>{{preparation</h2>
+               <h3>Description: {{description}}</h3>
+               <h2>Ingredients: {{ingredient_list}}</h2>
+               <h2>How to prepare: {{preparation</h2>
             </div>
         </script>    
 
     <script>
         var template = Handlebars.compile($('entry-template').html());
 
-        //Unsure of where the "desc" part of the code is being pulled from
         $('data-goes-here').html(template(description));
 
     </script>
