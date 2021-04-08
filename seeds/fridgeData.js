@@ -4,25 +4,26 @@ const seedFridge = [
   {
     name: "Lettuce",
     refrigerated: "true",
-    frozen: "false"
+    frozen: "false",
   },
   {
     name: "Tomato",
     refrigerated: "true",
-    frozen: "false"
+    frozen: "false",
   },
   {
     name: "Meat",
     refrigerated: "true",
-    frozen: "false"
+    frozen: "false",
   },
   {
     name: "Mayo",
     refrigerated: "true",
-    frozen: "false"
+    frozen: "false",
   },
 ];
 
+module.exports = seedFridge;
 const seedGallery = () => Fridge.bulkCreate(seedFridge);
 
 seedGallery();
