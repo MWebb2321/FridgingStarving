@@ -23,6 +23,7 @@ const seedFridge = [
   },
 ];
 
+//Should we get rid of this first module.exports?
 module.exports = seedFridge;
 const seedGallery = () => Fridge.bulkCreate(seedFridge);
 
