@@ -1,10 +1,8 @@
-{{#each users as |user| }}
-<div class="row align-center mb-5">
-  <div class="col-md-6">
-    <h2>{{{get_emoji}}} {{user.name}}</h2>
-  </div>
-  <div class="col-md-6">
-    <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
-  </div>
-</div>
+{{#each Fridge as |Fridge| }}
+ <input type="checkbox" id="ingredient{{Fridge.id}}" name="ingredient{{Fridge.id}}" value="ingredient{{Fridge.id}}">
+  <label for="vehicle1"> I have a bike</label><br>
 {{/each}}
+  {{!-- const fridgeData = await Fridge.findAll({
+      attributes: { exclude: ['id', 'name', 'email'] },
+      order: [['name', 'ASC']],
+    }); --}}

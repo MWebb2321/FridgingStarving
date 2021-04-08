@@ -1,20 +1,30 @@
-const { fridge } = require("../models");
+const { Fridge } = require("../models");
 
-const fridgeData = [
+const seedFridge = [
   {
     name: "Lettuce",
+    refrigerated: "true",
+    frozen: "false"
   },
   {
     name: "Tomato",
+    refrigerated: "true",
+    frozen: "false"
   },
   {
     name: "Meat",
+    refrigerated: "true",
+    frozen: "false"
   },
   {
     name: "Mayo",
+    refrigerated: "true",
+    frozen: "false"
   },
 ];
 
-const seedGallery = () => fridge.bulkCreate(fridgeData);
+const seedGallery = () => Fridge.bulkCreate(seedFridge);
+
+seedGallery();
 
 module.exports = seedFridge;
