@@ -19,17 +19,7 @@ Fridge.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      
       },
-
-    refrigerated: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    frozen: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
   },
   {
     hooks: {

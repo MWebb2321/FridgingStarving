@@ -1,4 +1,4 @@
-const { Fridge } = require("../models");
+const { Fridge, User } = require("../models");
 
 const seedFridge = [
   {
@@ -23,8 +23,6 @@ const seedFridge = [
   },
 ];
 
-//Should we get rid of this first module.exports?
-module.exports = seedFridge;
 const seedGallery = () => Fridge.bulkCreate(seedFridge);
 
 seedGallery();
