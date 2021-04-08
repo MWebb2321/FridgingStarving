@@ -30,7 +30,7 @@ This repository is licensed under the [![License: MIT](https://img.shields.io/ba
 
 ![img](https://img.shields.io/github/contributors/Mwebb2321/FridgingStarving)
 
-Contributions were made by: [Manny Chacon] (https://github.com/ItsMEChacon) & [Guadalupe de Arcos] (https://github.com/Guadaluped74)
+Contributions were made by: [Manny Chacon](https://github.com/ItsMEChacon) & [Guadalupe de Arcos](https://github.com/Guadaluped74)
 
 ## Testing
 
@@ -43,4 +43,4 @@ node index.js
 ## Questions
 
 Any comments, questions, concerns? Feel free to contact me at [mwebb2321@github.com](maito:mwebb2321@github.com).
-My gitHub profile is [MWebb2321], (https://github.com/MWebb2321)
+Our gitHub profiles are [Manny Chacon](https://github.com/ItsMEChacon), [Guadalupe de Arcos](https://github.com/Guadaluped74), [MWebb2321](https://github.com/MWebb2321)
