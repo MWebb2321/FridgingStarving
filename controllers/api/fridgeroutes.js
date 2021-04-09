@@ -3,7 +3,8 @@ const { User } = require('../../models');
 const { Fridge } = require('../../models');
 const withAuth = require("../../utils/auth");
 
-// all routes are /api/fridge (more can be added)
+// all routes are /api/fridge (more can be added) Creates item and assigns it to current user_id
+
 router.post('/', withAuth, async (req, res) => {
   try {
         const fridgeItem = await Fridge.findOne({ where: { name: req.body.name } });
@@ -21,5 +22,14 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+// /api/fridge/:id
+router.delete('/:id', withAuth, async (req, res) =>{
+  try {
+    const fridgeItem = await Fridge.destroy({where: {id: req.params.id}})
+    res.status(200).json({Message:"has been removed from the fridge"})
+  } catch (err) {
+    res.status(400).json(err);
+  }
+})
 
 module.exports = router
