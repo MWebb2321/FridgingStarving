@@ -1,8 +1,9 @@
 const User = require("./User");
 const Fridge = require("./Fridge");
 
-User.hasMany(Dishes_Owned, {
+User.hasMany(Fridge, {
   foreignKey: "user_id",
+  onDelete: "CASCADE",
 });
 
 Fridge.belongsTo(User, {
