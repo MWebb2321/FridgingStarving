@@ -89,3 +89,26 @@ router.post("/fridge", async (req, res) => {
 });
 
 module.exports = router;
+
+// Use withAuth middleware to prevent access to route
+// router.get('/users', withAuth, async (req, res) => {
+
+//   try {
+//     // Find the logged in user based on the session ID
+//     const userData = await Users.findByPk(req.session.user_id, {
+//       attributes: { exclude: ['password'] },
+//       include: [{ model: fridgeData }],
+//     });
+
+//     const user = userData.get({ plain: true });
+//     console.log(user);
+//     res.render('user', {
+//       user,
+//       logged_in: true
+//     });
+//   } catch (err) {
+//     console.log(`Nope, not gonna happen`);
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
