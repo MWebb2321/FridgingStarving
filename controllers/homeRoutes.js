@@ -2,6 +2,28 @@ const router = require("express").Router();
 const { User, Fridge } = require("../models");
 const withAuth = require("../utils/auth");
 
+router.get("/", (req, res) => {
+  res.render("homepage");
+});
+
+//Added and put in as comment, make changes as necessary
+
+// router.get('/...', async (req, res) => {
+//   try {
+//     const dishData = await.dish.findAll();
+
+//     const dish = dishData.map(dish.get({ plain: true }));
+
+//     console.log(dish);
+//     res.render('dishlist', {
+//       dish,
+//       logged_in: req.session.logged_in
+//     });
+//   } catch (err) {
+//     res.status(500).json.(err);
+//   }
+// });
+
 // Prevent non logged in users from viewing the homepage
 router.get("/", withAuth, async (req, res) => {
   try {
@@ -45,22 +67,21 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-router.post('/fridge', async (req, res) => {
+router.post("/fridge", async (req, res) => {
   try {
     const fridgeItem = await Fridge.findOne({ where: { name: req.body.name } });
 
     if (!fridgeItem) {
-      const response = await fetch('/api/fridge', {
-        method: 'POST',
+      const response = await fetch("/api/fridge", {
+        method: "POST",
         body: JSON.stringify({ name }),
-        headers: { 'Content-Type': 'application/json' },
+        headers: { "Content-Type": "application/json" },
       });
       if (response.ok) {
-        document.location.replace('/');
+        document.location.replace("/");
       } else {
-        alert('Failed to add item');
+        alert("Failed to add item");
       }
-    
     }
   } catch (err) {
     res.status(400).json(err);
