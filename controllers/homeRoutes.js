@@ -112,3 +112,22 @@ module.exports = router;
 //     res.status(500).json(err);
 //   }
 // });
+
+// router.get("/dishes", withAuth, async (req, res) => {
+//   try {
+//     const dishData = await Users.findAll({
+//       attributes: { exclude: ["password"] },
+//       include: [{ model: allDish }],
+//     });
+
+//     const gardeners = dishData.map((plant) => dish.get({ plain: true }));
+
+//     console.log(gardeners);
+//     res.render("dishes", {
+//       dishes,
+//       logged_in: req.session.logged_in,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
