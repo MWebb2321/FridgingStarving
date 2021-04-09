@@ -2,9 +2,9 @@ const router = require("express").Router();
 const { User, Fridge } = require("../models");
 const withAuth = require("../utils/auth");
 
-router.get("/", (req, res) => {
-  res.render("homepage");
-});
+// router.get("/", (req, res) => {
+//   res.render("homepage");
+// });
 
 //Added and put in as comment, make changes as necessary
 
@@ -28,6 +28,7 @@ router.get("/", (req, res) => {
 router.get("/", withAuth, async (req, res) => {
   try {
     const fridgeData = await Fridge.findAll({
+      where: {user_id: req.session.user_id },
       attributes: { exclude: ["id"] },
       order: [["name", "ASC"]],
     });
@@ -42,20 +43,22 @@ router.get("/", withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-
-  $("button").click(function () {
-    $.post(
-      "fridge_db",
-      {
-        attributes: "id",
-        order: "name",
-      },
-      function (data, status) {
-        alert("Data: " + data + "\nStatus: " + status);
-      }
-    );
-  });
 });
+
+
+//   $("button").click(function () {
+//     $.post(
+//       "fridge_db",
+//       {
+//         attributes: "id",
+//         order: "name",
+//       },
+//       function (data, status) {
+//         alert("Data: " + data + "\nStatus: " + status);
+//       }
+//     );
+//   });
+// });
 
 router.get("/login", (req, res) => {
   // If a session exists, redirect the request to the homepage
