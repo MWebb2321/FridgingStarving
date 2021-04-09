@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+//api/users --- Creates a new user
+
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
@@ -15,6 +17,8 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+//api/users/login logs in existing user
 
 router.post('/login', async (req, res) => {
   try {
@@ -47,6 +51,8 @@ router.post('/login', async (req, res) => {
     res.status(400).json(err);
   }
 });
+
+//api/users/logout logs out existing user
 
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {

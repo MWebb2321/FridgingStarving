@@ -7,15 +7,16 @@ const itemAdd = async (event) => {
   
     if (item) {
       // Send the e-mail and password to the server
-      const response = await fetch('/api/fridge/name', {
+      const response = await fetch('/api/fridge', {
         method: 'POST',
-        body: JSON.stringify({ name }),
+        body: JSON.stringify({name:item }),
         headers: { 'Content-Type': 'application/json' },
       });
   
       if (response.ok) {
         document.location.replace('/');
       } else {
+        console.log(response)
         alert('Failed to add item');
       }
     }
@@ -23,6 +24,6 @@ const itemAdd = async (event) => {
   
   
   document
-    .querySelector('.login-form')
+    .querySelector('.add-item')
     .addEventListener('submit', itemAdd);
   

@@ -3,11 +3,17 @@
   <div class="col-md-6">
     <h2>{{fridge.name}}</h2>
   </div>
+  <div class ="col-md-2">
+    <button class = "foodRemove" data-id={{fridge.id}}>Remove</button>
+  </div>
 </div>
 {{/each}}
-<form>
+<form class = "add-item" >
 <div class="form-group">
     <label for="item-add">Item:</label>
     <input class="form-input" type="text" id="item-add" />
 </div>
 </form>
+
+<script src="/additem.js"></script>
+<script src ="/removeitem.js"></script>
