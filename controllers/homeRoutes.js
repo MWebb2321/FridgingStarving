@@ -122,7 +122,7 @@ module.exports = router;
 
 //     const gardeners = dishData.map((plant) => dish.get({ plain: true }));
 
-//     console.log(gardeners);
+//     console.log(dishes);
 //     res.render("dishes", {
 //       dishes,
 //       logged_in: req.session.logged_in,
