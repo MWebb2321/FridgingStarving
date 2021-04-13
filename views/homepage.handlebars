@@ -1,19 +1,32 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div style = "color:white">
+    <h2>
+    &#127881 Fridging Starving! &#127881
+    </h2>
+  </div>
+  <div>
+    <button class="btn btn-primary justify-right" id="logout">Logout</button>
+  </div>
+</nav>
+<br>
+<br>
 {{#each fridge as |fridge| }}
 <div class="row align-center mb-5">
   <div class="col-md-6">
     <h2>{{fridge.name}}</h2>
   </div>
-  <div class ="col-md-2">
-    <button class = "foodRemove" data-id={{fridge.id}}>Remove</button>
+  <div class="col-md-2">
+    <button class="foodRemove btn btn-primary" data-id={{fridge.id}}>Remove</button>
   </div>
 </div>
 {{/each}}
-<form class = "add-item" >
-<div class="form-group">
+<form class="add-item">
+  <div class="form-group">
     <label for="item-add">Item:</label>
     <input class="form-input" type="text" id="item-add" />
-</div>
+  </div>
 </form>
 
 <script src="/additem.js"></script>
-<script src ="/removeitem.js"></script>
+<script src="/removeitem.js"></script>
+<script src="/logout.js"></script>
